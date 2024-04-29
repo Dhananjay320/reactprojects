@@ -11,7 +11,7 @@ export const RoundedButton = ({
 }) => {
     return (
       <View>
-      <View style={{ margin: 5, flexDirection: 'row' }} >
+      <View style={{ margin: 5, flexDirection: 'row',paddingRight:70 }} >
         <TouchableOpacity style={[styles(size).radius]} onPress ={setrestatime} >
           <MaterialCommunityIcons name="restart" size={50} color="black" />
         </TouchableOpacity>

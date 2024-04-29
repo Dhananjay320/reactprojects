@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';  
 import { Text, View } from 'react-native';  
-export const Timer = ({ minutes, pause, restarte, rerestatime, resetingpausetime, clearall, clearallthings }) => {
+export const Timer = ({ minutes, pause, restarte, rerestatime, resetingpausetime, clearall, clearallthings,setsountalertscreen }) => {
     const interval = useRef(null);
     const [seconds, setSeconds] = useState(minutes * 60);
     
@@ -40,7 +40,8 @@ export const Timer = ({ minutes, pause, restarte, rerestatime, resetingpausetime
     }, [pause]);
     useEffect(() => {
         if(seconds === 0)
-        {         
+        { 
+          setsountalertscreen();        
           rerestatime();
           resetingpausetime();
         }
